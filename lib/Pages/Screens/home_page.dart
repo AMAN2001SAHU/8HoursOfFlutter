@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tut_android_studios/widgets/drawer.dart';
 
 class Homepage extends StatelessWidget {
   final int days = 30;
@@ -6,16 +7,17 @@ class Homepage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold (
+    return Scaffold(
       appBar: AppBar(
         title: Text("Catalog App"),
       ),
-      body : Center(
+      body: Center(
         child: Container(
+          color: Colors.white,
           child: Text("$days Day Flutter Tutorial by $name"),
         ),
       ),
-      drawer: Drawer(),
+      drawer: MyDrawer(),
     );
   }
 }
